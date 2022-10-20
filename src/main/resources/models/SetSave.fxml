@@ -7,37 +7,33 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="200.0" prefWidth="300.0" styleClass="Background" stylesheets="@../styles/dark.css" xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zn.soft.logic.controllers.SetSaveControl">
-   <children>
-      <HBox layoutX="76.0" layoutY="77.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefWidth="3000.0" text="Cancel">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="RedText" />
-               </styleClass>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#pressed_Save" prefWidth="3000.0" text="Save">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="GreenText" />
-               </styleClass>
-            </Button>
-         </children>
+<AnchorPane prefHeight="200.0" prefWidth="300.0" styleClass="Background" stylesheets="@../styles/dark.css"
+            xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="zn.soft.logic.controllers.SetSaveControl">
+   <HBox layoutX="76.0" layoutY="77.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefWidth="3000.0" text="Cancel">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="RedText"/>
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#pressed_Save" prefWidth="3000.0" text="Save">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="GreenText"/>
+         </styleClass>
+      </Button>
+   </HBox>
+   <VBox alignment="CENTER" layoutX="115.0" layoutY="-24.0" spacing="5.0" AnchorPane.bottomAnchor="24.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="CENTER">
+         <TextField fx:id="tf_SetName" alignment="CENTER" prefWidth="200.0" promptText="name...">
+            <styleClass>
+               <String fx:value="TFSilent"/>
+               <String fx:value="BorderBottom"/>
+            </styleClass>
+         </TextField>
       </HBox>
-      <VBox alignment="CENTER" layoutX="115.0" layoutY="-24.0" spacing="5.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <HBox alignment="CENTER">
-               <children>
-                  <TextField fx:id="tf_SetName" alignment="CENTER" prefWidth="200.0" promptText="name...">
-                     <styleClass>
-                        <String fx:value="TFSilent" />
-                        <String fx:value="BorderBottom" />
-                     </styleClass>
-                  </TextField>
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </children>
+   </VBox>
 </AnchorPane>

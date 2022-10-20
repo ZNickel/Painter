@@ -1,6 +1,8 @@
 package zn.soft.logic.controllers;
 
 import java.io.File;
+import java.util.Objects;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 public class LoadSetControl {
     @FXML private VBox container;
 
-    private ToggleGroup group = new ToggleGroup();
+    private final ToggleGroup group = new ToggleGroup();
     private File selectedType = null;
 
     @FXML void pressed_Cancel() {
@@ -24,7 +26,7 @@ public class LoadSetControl {
     }
     @FXML void initialize() {
         File dir = new File("preset");
-        for (File file : dir.listFiles()){
+        for (File file : Objects.requireNonNull(dir.listFiles())){
             // TODO: 20.10.2022 Rewrite split to filename and file extension
             ToggleButton button = new ToggleButton(file.getName().split("\\.")[0]);
             button.setPrefWidth(285d);

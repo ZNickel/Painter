@@ -12,7 +12,7 @@ public class SelectFilterControl {
     @FXML
     private VBox pane_container;
 
-    private ToggleGroup group = new ToggleGroup();
+    private final ToggleGroup group = new ToggleGroup();
     private FilterType selectedType = null;
 
     @FXML

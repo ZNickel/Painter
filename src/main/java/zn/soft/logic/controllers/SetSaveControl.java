@@ -2,7 +2,6 @@ package zn.soft.logic.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
 import javax.xml.transform.OutputKeys;
@@ -15,8 +14,6 @@ import java.io.FileOutputStream;
 public class SetSaveControl {
     @FXML private TextField tf_SetName;
 
-    private File saveDir = null;
-
     @FXML void pressed_Cancel() {
         ((Stage)tf_SetName.getScene().getWindow()).close();
     }
@@ -27,7 +24,10 @@ public class SetSaveControl {
         if (ready){
             try {
                 var dir = new File("preset");
-                dir.mkdirs();
+                if (!dir.exists() && dir.mkdirs()){
+                    // TODO: 20.10.2022 Error message
+                    System.out.println("cant create dir");
+                }
                 var file = new File(dir.getPath() + "/" + tf_SetName.getText() + ".xml");
                 var transformer = TransformerFactory.newInstance().newTransformer();
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");

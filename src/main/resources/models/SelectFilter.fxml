@@ -10,33 +10,31 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="350.0" prefWidth="250.0" styleClass="Background" stylesheets="@../styles/dark.css" xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml" fx:controller="zn.soft.logic.controllers.SelectFilterControl">
-   <children>
-      <HBox layoutX="14.0" layoutY="197.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefHeight="26.0" prefWidth="1000.0" text="Cancel">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="RedText" />
-               </styleClass>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#pressed_Add" prefHeight="26.0" prefWidth="1000.0" text="Add">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="GreenText" />
-               </styleClass>
-            </Button>
-         </children>
-      </HBox>
-      <StackPane layoutX="50.0" layoutY="14.0" prefHeight="26.0" styleClass="BorderBottom" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label prefHeight="30.0" styleClass="Lb" text="Select new filter type:" />
-         </children>
-      </StackPane>
-      <ScrollPane hbarPolicy="NEVER" layoutX="36.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
-         <content>
-            <VBox fx:id="pane_container" minHeight="1.0" minWidth="235.0" />
-         </content>
-      </ScrollPane>
-   </children>
+<AnchorPane prefHeight="350.0" prefWidth="250.0" styleClass="Background" stylesheets="@../styles/dark.css"
+            xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="zn.soft.logic.controllers.SelectFilterControl">
+   <HBox layoutX="14.0" layoutY="197.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefHeight="26.0" prefWidth="1000.0" text="Cancel">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="RedText"/>
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#pressed_Add" prefHeight="26.0" prefWidth="1000.0" text="Add">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="GreenText"/>
+         </styleClass>
+      </Button>
+   </HBox>
+   <StackPane layoutX="50.0" layoutY="14.0" prefHeight="26.0" styleClass="BorderBottom" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label prefHeight="30.0" styleClass="Lb" text="Select new filter type:"/>
+   </StackPane>
+   <ScrollPane hbarPolicy="NEVER" layoutX="36.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0"
+               vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+      <VBox fx:id="pane_container" minHeight="1.0" minWidth="235.0"/>
+   </ScrollPane>
 </AnchorPane>

@@ -11,88 +11,97 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" styleClass="Background" stylesheets="@../styles/dark.css" xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zn.soft.logic.controllers.ManualControl">
-   <children>
-      <StackPane fx:id="pane_Img" layoutX="200.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0">
-         <children>
-            <ImageView fx:id="imgView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-         </children>
-      </StackPane>
-      <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="64.0" prefWidth="200.0" styleClass="BorderRight" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="26.0">
-         <content>
-            <VBox prefWidth="184.0">
-               <children>
-                  <AnchorPane prefWidth="184.0" styleClass="BorderBottom">
-                     <children>
-                        <Button mnemonicParsing="false" onAction="#pressed_Add" text="+" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="0.0">
-                           <styleClass>
-                              <String fx:value="Btn" />
-                              <String fx:value="GreenText" />
-                           </styleClass>
-                        </Button>
-                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Del" text="-" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <styleClass>
-                              <String fx:value="Btn" />
-                              <String fx:value="RedText" />
-                           </styleClass>
-                        </Button>
-                     </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </AnchorPane>
-                  <VBox fx:id="pane_Filters" prefHeight="0.0" prefWidth="0.0" />
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
-      <ScrollPane hbarPolicy="NEVER" layoutX="326.0" layoutY="75.0" prefWidth="200.0" styleClass="BorderLeft" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
-         <content>
-            <VBox fx:id="pane_Settings" maxWidth="184.0" minHeight="1.0" minWidth="184.0" prefWidth="184.0" />
-         </content>
-      </ScrollPane>
-      <AnchorPane layoutX="300.0" layoutY="-86.0" prefHeight="26.0" styleClass="BorderBottom" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Button layoutX="10.0" layoutY="4.0" mnemonicParsing="false" onAction="#pressed_LoadImage" prefWidth="100.0" styleClass="Btn" text="Load image" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-            <Button layoutX="95.0" layoutY="6.0" mnemonicParsing="false" onAction="#pressed_LoadSet" prefWidth="100.0" styleClass="Btn" text="Load set" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="0.0" />
-            <Label layoutX="221.0" layoutY="4.0" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" styleClass="BorderFill" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="199.0" AnchorPane.topAnchor="0.0" />
-            <HBox alignment="CENTER" layoutX="151.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Label fx:id="lb_ImageName" alignment="CENTER" prefWidth="20000.0" styleClass="LbDark" text="Image name" />
-                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" styleClass="BorderFill" />
-                  <Label fx:id="lb_SetName" alignment="CENTER" prefWidth="20000.0" styleClass="LbDark" text="Set name" />
-               </children>
-            </HBox>
-            <Label layoutX="491.0" maxHeight="1.7976931348623157E308" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" styleClass="BorderFill" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="199.0" AnchorPane.topAnchor="0.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="310.0" layoutY="-76.0" prefHeight="26.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#pressed_Back" prefWidth="60.0" text="Back" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" styleClass="Background" stylesheets="@../styles/dark.css"
+            xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="zn.soft.logic.controllers.ManualControl">
+   <StackPane fx:id="pane_Img" layoutX="200.0" layoutY="125.0" prefHeight="150.0" prefWidth="200.0"
+              AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"
+              AnchorPane.topAnchor="30.0">
+      <ImageView fx:id="imgView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true"/>
+   </StackPane>
+   <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="64.0" prefWidth="200.0" styleClass="BorderRight"
+               vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.topAnchor="26.0">
+      <VBox prefWidth="184.0">
+         <AnchorPane prefWidth="184.0" styleClass="BorderBottom">
+            <VBox.margin>
+               <Insets/>
+            </VBox.margin>
+            <Button mnemonicParsing="false" onAction="#pressed_Add" text="+" AnchorPane.bottomAnchor="1.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="92.0" AnchorPane.topAnchor="0.0">
                <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="RedText" />
+                  <String fx:value="Btn"/>
+                  <String fx:value="GreenText"/>
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Save" prefWidth="60.0" text="Save" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Del" text="-"
+                    AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="92.0" AnchorPane.rightAnchor="0.0"
+                    AnchorPane.topAnchor="0.0">
                <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="GreenText" />
+                  <String fx:value="Btn"/>
+                  <String fx:value="RedText"/>
                </styleClass>
             </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_SaveSet" prefWidth="80.0" text="Save set" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="GreenText" />
-               </styleClass>
-            </Button>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Reset" prefWidth="60.0" text="Reset" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.0">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="RedText" />
-               </styleClass>
-            </Button>
-         </children>
-      </AnchorPane>
-   </children>
+         </AnchorPane>
+         <VBox fx:id="pane_Filters" prefHeight="0.0" prefWidth="0.0"/>
+      </VBox>
+   </ScrollPane>
+   <ScrollPane hbarPolicy="NEVER" layoutX="326.0" layoutY="75.0" prefWidth="200.0" styleClass="BorderLeft"
+               vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="26.0" AnchorPane.rightAnchor="0.0"
+               AnchorPane.topAnchor="26.0">
+      <VBox fx:id="pane_Settings" maxWidth="184.0" minHeight="1.0" minWidth="184.0" prefWidth="184.0"/>
+   </ScrollPane>
+   <AnchorPane layoutX="300.0" layoutY="-86.0" prefHeight="26.0" styleClass="BorderBottom"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="10.0" layoutY="4.0" mnemonicParsing="false" onAction="#pressed_LoadImage" prefWidth="100.0"
+              styleClass="Btn" text="Load image" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.topAnchor="0.0"/>
+      <Button layoutX="95.0" layoutY="6.0" mnemonicParsing="false" onAction="#pressed_LoadSet" prefWidth="100.0"
+              styleClass="Btn" text="Load set" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="100.0"
+              AnchorPane.topAnchor="0.0"/>
+      <Label layoutX="221.0" layoutY="4.0" maxWidth="1.0" minWidth="1.0" prefWidth="1.0" styleClass="BorderFill"
+             AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="199.0" AnchorPane.topAnchor="0.0"/>
+      <HBox alignment="CENTER" layoutX="151.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="201.0"
+            AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="0.0">
+         <Label fx:id="lb_ImageName" alignment="CENTER" prefWidth="20000.0" styleClass="LbDark"
+                text="Image name"/>
+         <Label maxHeight="1.7976931348623157E308" maxWidth="1.0" minWidth="1.0" prefWidth="1.0"
+                styleClass="BorderFill"/>
+         <Label fx:id="lb_SetName" alignment="CENTER" prefWidth="20000.0" styleClass="LbDark" text="Set name"/>
+      </HBox>
+      <Label layoutX="491.0" maxHeight="1.7976931348623157E308" maxWidth="1.0" minWidth="1.0" prefWidth="1.0"
+             styleClass="BorderFill" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="199.0"
+             AnchorPane.topAnchor="0.0"/>
+   </AnchorPane>
+   <AnchorPane layoutX="310.0" layoutY="-76.0" prefHeight="26.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0"
+               AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Button mnemonicParsing="false" onAction="#pressed_Back" prefWidth="60.0" text="Back"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="RedText"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Save" prefWidth="60.0"
+              text="Save" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="GreenText"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_SaveSet" prefWidth="80.0"
+              text="Save set" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="GreenText"/>
+         </styleClass>
+      </Button>
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_Reset" prefWidth="60.0"
+              text="Reset" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="0.0">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="RedText"/>
+         </styleClass>
+      </Button>
+   </AnchorPane>
 </AnchorPane>

@@ -10,37 +10,35 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="Background" stylesheets="@../styles/dark.css" xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zn.soft.logic.controllers.LoadSetControl">
-   <children>
-      <HBox alignment="CENTER" layoutX="38.0" layoutY="-36.0" styleClass="BorderBottom" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <Label prefHeight="26.0" styleClass="Lb" text="Select preset">
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </Label>
-         </children>
-      </HBox>
-      <ScrollPane hbarPolicy="NEVER" layoutX="57.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
-         <content>
-            <VBox fx:id="container" minHeight="1.0" minWidth="1.0" prefHeight="1.0" prefWidth="285.0" />
-         </content>
-      </ScrollPane>
-      <HBox layoutX="57.0" layoutY="286.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefWidth="2000.0" text="Cancel">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="RedText" />
-               </styleClass>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#pressed_Load" prefWidth="2000.0" text="Load">
-               <styleClass>
-                  <String fx:value="Btn" />
-                  <String fx:value="GreenText" />
-               </styleClass>
-            </Button>
-         </children>
-      </HBox>
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="Background" stylesheets="@../styles/dark.css"
+            xmlns="http://javafx.com/fxml" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="zn.soft.logic.controllers.LoadSetControl">
+   <HBox alignment="CENTER" layoutX="38.0" layoutY="-36.0" styleClass="BorderBottom" AnchorPane.leftAnchor="0.0"
+         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label prefHeight="26.0" styleClass="Lb" text="Select preset">
+         <HBox.margin>
+            <Insets/>
+         </HBox.margin>
+      </Label>
+   </HBox>
+   <ScrollPane hbarPolicy="NEVER" layoutX="57.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0"
+               vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="0.0"
+               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+      <VBox fx:id="container" minHeight="1.0" minWidth="1.0" prefHeight="1.0" prefWidth="285.0"/>
+   </ScrollPane>
+   <HBox layoutX="57.0" layoutY="286.0" styleClass="BorderTop" AnchorPane.bottomAnchor="0.0"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Button mnemonicParsing="false" onAction="#pressed_Cancel" prefWidth="2000.0" text="Cancel">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="RedText"/>
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#pressed_Load" prefWidth="2000.0" text="Load">
+         <styleClass>
+            <String fx:value="Btn"/>
+            <String fx:value="GreenText"/>
+         </styleClass>
+      </Button>
+   </HBox>
 </AnchorPane>
