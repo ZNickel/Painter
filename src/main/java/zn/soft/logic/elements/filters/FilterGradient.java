@@ -21,10 +21,10 @@ public class FilterGradient extends Filter {
 
     public FilterGradient(FilterSet filterSet, Updatable updatable) {
         super(filterSet, updatable, FilterType.GRADIENT);
-        startColor = new ColorProperty("Start color:", updatable, false);
-        endColor = new ColorProperty("End color:", updatable, false);
-        startPosition = new PercentPointProperty("Start position:", updatable, false);
-        endPosition = new PercentPointProperty("End position:", updatable, false);
+        startColor = new ColorProperty("Start color:", updatable, false, 255, 0, 0, 127);
+        endColor = new ColorProperty("End color:", updatable, false, 0, 0, 0, 127);
+        startPosition = new PercentPointProperty("Start position:", updatable, false, 100, 100);
+        endPosition = new PercentPointProperty("End position:", updatable, false, 0, 0);
     }
     public FilterGradient(FilterSet filterSet, Updatable updatable, Node node) {
         super(filterSet, updatable, FilterType.GRADIENT);

@@ -22,7 +22,7 @@ public class FilterSplit extends Filter {
     public FilterSplit(FilterSet filterSet, Updatable updatable) {
         super(filterSet, updatable, FilterType.SPLIT);
         splitter = new NumericProperty("Splitter:", updatable, false, 0, 127, 255);
-        colorUnder = new ColorProperty("Color under splitter:", updatable, false);
+        colorUnder = new ColorProperty("Color under splitter:", updatable, false, 255, 255, 255, 255);
         colorAfter = new ColorProperty("Color after splitter:", updatable, false);
     }
     public FilterSplit(FilterSet filterSet, Updatable updatable, Node node) {

@@ -23,7 +23,7 @@ public class FilterAddText extends Filter {
     public FilterAddText(FilterSet filterSet, Updatable updatable) {
         super(filterSet, updatable, FilterType.ADD_TEXT);
         text = new TextProperty("Text:", updatable, false, "Default");
-        color = new ColorProperty("Text color:", updatable, false);
+        color = new ColorProperty("Text color:", updatable, false, 255, 255, 255, 255);
         size = new NumericProperty("Font size:", updatable, false, 1, 36, 120);
         position = new PercentPointProperty("Text position:", updatable, false);
     }

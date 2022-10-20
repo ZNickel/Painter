@@ -23,7 +23,7 @@ public class TextProperty extends Property{
 
     @Override
     public VBox createRepresentFX() {
-        TextField textField = new TextField("Text...");
+        TextField textField = new TextField(value);
         textField.setAlignment(Pos.CENTER);
         textField.setPrefWidth(174d);
         textField.setPrefHeight(30d);

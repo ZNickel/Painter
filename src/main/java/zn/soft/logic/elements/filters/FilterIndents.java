@@ -19,10 +19,10 @@ public class FilterIndents extends Filter {
 
     public FilterIndents(FilterSet filterSet, Updatable updatable) {
         super(filterSet, updatable, FilterType.INDENTS);
-        left = new NumericProperty("Left:", updatable, false, 0, 50, 128);
-        right = new NumericProperty("Right:", updatable, false, 0, 50, 128);
-        top = new NumericProperty("Top:", updatable, false, 0, 50, 128);
-        bottom = new NumericProperty("Bottom:", updatable, false, 0, 50, 128);
+        left = new NumericProperty("Left:", updatable, false, 0, 0, 128);
+        right = new NumericProperty("Right:", updatable, false, 0, 0, 128);
+        top = new NumericProperty("Top:", updatable, false, 0, 0, 128);
+        bottom = new NumericProperty("Bottom:", updatable, false, 0, 0, 128);
     }
     public FilterIndents(FilterSet filterSet, Updatable updatable, Node node) {
         super(filterSet, updatable, FilterType.INDENTS);

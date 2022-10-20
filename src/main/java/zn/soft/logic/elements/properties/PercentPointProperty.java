@@ -17,6 +17,11 @@ public class PercentPointProperty extends Property{
         x = new NumericProperty("X:", updatable, true, 0, 50, 100);
         y = new NumericProperty("Y:", updatable, true, 0, 50, 100);
     }
+    public PercentPointProperty(String propertyName, Updatable updatable, boolean isComponent, int x, int y) {
+        super(propertyName, updatable, isComponent);
+        this.x = new NumericProperty("X:", updatable, true, 0, x, 100);
+        this.y = new NumericProperty("Y:", updatable, true, 0, y, 100);
+    }
     public PercentPointProperty(Updatable updatable, boolean isComponent, Node node) {
         super(((Element)node).getAttribute("name"), updatable, isComponent);
         Element element = (Element) node;
