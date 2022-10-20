@@ -1,0 +1,193 @@
+/*    color background: 555555    */
+/*    color hover: 505050    */
+/*    color pressed: 454545    */
+/*    color font color: ddd    */
+/*    color font color red: d56565    */
+.Background{
+    -fx-background-color: #555555;
+}
+
+.Btn{
+    -fx-background-color: #555555;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-font-family: Tahoma;
+    -fx-text-fill: #b5b5b5;
+}
+.Btn:hover{
+    -fx-background-color: #505050;
+}
+.Btn:pressed{
+    -fx-background-color: #454545;
+}
+
+.Lb{
+    -fx-font-family: Tahoma;
+    -fx-text-fill: #b5b5b5;
+}
+.LbDark{
+    -fx-font-family: Tahoma;
+    -fx-text-fill: #828282;
+}
+
+.Slider .track{
+    -fx-background-color: #444;
+    -fx-border-color: #666;
+    -fx-pref-height: 1;
+}
+.Slider .thumb{
+    -fx-background-color: #444;
+    -fx-border-width: 1;
+    -fx-border-color: #666;
+    -fx-border-radius: 10;
+}
+.SliderRed .thumb{
+    -fx-background-color: #c55;
+    -fx-border-width: 0;
+}
+.SliderRed .thumb:hover{
+    -fx-background-color: #b44;
+}
+.SliderRed .thumb:pressed{
+    -fx-background-color: #a33;
+}
+.SliderGreen .thumb{
+    -fx-background-color: #5c5;
+    -fx-border-width: 0;
+}
+.SliderGreen .thumb:hover{
+    -fx-background-color: #4b4;
+}
+.SliderGreen .thumb:pressed{
+    -fx-background-color: #3a3;
+}
+.SliderBlue .thumb{
+    -fx-background-color: #55c;
+    -fx-border-width: 0;
+}
+.SliderBlue .thumb:hover{
+    -fx-background-color: #44b;
+}
+.SliderBlue .thumb:pressed{
+    -fx-background-color: #33a;
+}
+.SliderWhite .thumb{
+    -fx-background-color: #aaa;
+    -fx-border-width: 0;
+}
+.SliderWhite .thumb:hover{
+    -fx-background-color: #999;
+}
+.SliderWhite .thumb:pressed{
+    -fx-background-color: #888;
+}
+
+.TFSilent{
+    -fx-background-color: #555555;
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-border-radius: 0;
+    -fx-text-fill: #ddd;
+    -fx-prompt-text-fill: #777;
+    -fx-font-family: Tahoma;
+}
+.TFSilent:hover{
+    -fx-background-color: #505050;
+}
+.TFSilent:selected{
+    -fx-background-color: #454545;
+}
+
+.scroll-pane{
+    -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: #555555;
+}
+.scroll-bar{
+    -fx-background-color: #555555;
+}
+.scroll-bar .thumb{
+    -fx-border-insets: -2 -2 -2 0;
+    -fx-background-insets: -2 -2 -2 0;
+    -fx-background-color: #555555;
+    -fx-background-radius: 0;
+    -fx-border-width: 1;
+    -fx-border-color: #666;
+}
+.scroll-bar .thumb:hover{
+    -fx-background-color: #505050;
+}
+.scroll-bar .thumb:pressed{
+    -fx-background-color: #454545;
+}
+.scroll-bar:vertical > .increment-button > .increment-arrow {
+    -fx-padding: 0 0 0 0;
+}
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+    -fx-padding: 0 0 0 0;
+}
+.scroll-bar > .increment-button, .scroll-bar > .decrement-button {
+    -fx-padding: 0 0 0 0;
+}
+.scroll-bar:vertical > .increment-button, .scroll-bar:vertical > .decrement-button {
+    -fx-background-insets: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+}
+
+.CheckBox{
+    -fx-text-fill: #ddd;
+    -fx-font-family: Tahoma;
+}
+.CheckBox .box{
+    -fx-background-color: #555555;
+    -fx-border-color: #666;
+    -fx-border-radius: 10;
+    -fx-pref-width: 15;
+    -fx-pref-height: 15;
+}
+
+.Toggle{
+    -fx-background-color: #555555;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-text-fill: #ddd;
+    -fx-font-family: Tahoma;
+}
+.Toggle:hover{
+    -fx-background-color: #505050;
+}
+.Toggle:selected{
+    -fx-background-color: #454545;
+}
+
+.BorderBottom{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #666;
+}
+.BorderTop{
+    -fx-border-width: 1 0 0 0;
+    -fx-border-color: #666;
+}
+.BorderRight{
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #666;
+}
+.BorderLeft{
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: #666;
+}
+.BorderFill{
+    -fx-background-color: #666;
+}
+
+.RedText{
+    -fx-text-fill: #d56565;
+}
+.GreenText{
+    -fx-text-fill: #65d565;
+}
+.YellowText{
+    -fx-text-fill: #d5d565;
+}
