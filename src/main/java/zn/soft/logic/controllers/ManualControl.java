@@ -2,12 +2,17 @@ package zn.soft.logic.controllers;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.xml.sax.SAXException;
 import zn.soft.logic.elements.FilterSet;
@@ -19,6 +24,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class ManualControl {
     @FXML private ImageView imgView;
@@ -34,6 +40,7 @@ public class ManualControl {
     public File loadedSet = null;
     public static FilterSet set = null;
     public static FilterType addedFilterType = null;
+    public static BufferedImage lastGenerated = null;
 
     @FXML void pressed_Add() {
         Stage stage = UI.openAppModal(getClass().getResource("/models/SelectFilter.fxml"), false, "Select filter");
@@ -65,7 +72,7 @@ public class ManualControl {
                         lb_SetName.setText(set.name());
                         loadedSet = addedSet;
                         addedSet = null;
-                        System.out.println();
+                        update();
                         // TODO: 20.10.2022 Exception
                     } catch (ParserConfigurationException | SAXException | IOException e) {
                         e.printStackTrace();
@@ -76,7 +83,23 @@ public class ManualControl {
     }
 
     @FXML void pressed_Save() {
-
+        try{
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("/models/ImageSave.fxml")));
+            Parent parent = loader.load();
+            stage.setScene(new Scene(parent));
+            stage.setTitle("Save image");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setResizable(false);
+            stage.getIcons().add(
+                    new Image(Objects.requireNonNull(UI.class.getResource("/images/FilterSelectIcon.png")
+                    ).openStream()));
+            stage.show();
+        }
+        catch (IOException ex){
+            ex.printStackTrace();
+            // TODO: 26.09.2022 Error message. IOException
+        }
     }
 
     @FXML void pressed_SaveSet() {
@@ -91,6 +114,7 @@ public class ManualControl {
         if (loadedSet != null){
             try {
                 set = new FilterSet(pane_Filters, pane_Settings, this::update, loadedSet);
+                update();
                 // TODO: 20.10.2022 Exception
             } catch (ParserConfigurationException | IOException | SAXException e) {
                 e.printStackTrace();
@@ -109,14 +133,15 @@ public class ManualControl {
     private void update(){
         if (originalImageFile != null && originalImageFile.exists()){
             try {
-                BufferedImage result = set.apply(ImageIO.read(originalImageFile));
-
-                double scale = (Math.min(pane_Img.getWidth(), pane_Img.getHeight()) - 10) / Math.max(result.getHeight(), result.getWidth());
-                int w = (int) (result.getWidth() * scale);
-                int h = (int) (result.getHeight() * scale);
+                lastGenerated = set.apply(ImageIO.read(originalImageFile));
+                double minContDim = (Math.min(pane_Img.getWidth(), pane_Img.getHeight()) - 10);
+                double maxImgDim = Math.max(lastGenerated.getHeight(), lastGenerated.getWidth());
+                double scale = minContDim / maxImgDim;
+                int w = (int) (lastGenerated.getWidth() * scale);
+                int h = (int) (lastGenerated.getHeight() * scale);
                 BufferedImage paste = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
                 Graphics graphics = paste.getGraphics();
-                graphics.drawImage(result, 0, 0, w, h, null);
+                graphics.drawImage(lastGenerated, 0, 0, w, h, null);
                 imgView.setFitWidth(w);
                 imgView.setFitHeight(h);
                 imgView.setImage(SwingFXUtils.toFXImage(paste, null));

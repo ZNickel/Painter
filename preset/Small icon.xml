@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<set>
+    <name>default</name>
+    <filters>
+        <gradient>
+            <properties>
+                <startPosition name="Start position:" x="100" y="100"/>
+                <startColor alpha="150" blue="255" green="0" name="Start color:" red="0"/>
+                <endPosition name="End position:" x="0" y="0"/>
+                <endColor alpha="150" blue="0" green="0" name="End color:" red="0"/>
+            </properties>
+        </gradient>
+        <monochrome>
+            <properties>
+                <active name="Active:" value="true"/>
+            </properties>
+        </monochrome>
+    </filters>
+</set>

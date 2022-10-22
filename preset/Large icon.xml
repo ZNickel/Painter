@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<set>
+    <name>default</name>
+    <filters>
+        <add_text>
+            <properties>
+                <text name="Text:" value="Microsift Teams"/>
+                <color alpha="255" blue="255" green="255" name="Text color:" red="255"/>
+                <size max="120" min="1" name="Font size:" style="" value="48"/>
+                <position name="Text position:" x="3" y="97"/>
+            </properties>
+        </add_text>
+        <add_image>
+            <properties>
+                <image file="C:\Users\User\Desktop\q\MicrosoftTeams\Logo.png" name="Image file:"/>
+                <position name="Image Position:" x="3" y="3"/>
+                <width max="512" min="1" name="Width:" style="" value="128"/>
+                <height max="512" min="1" name="Height:" style="" value="128"/>
+            </properties>
+        </add_image>
+        <gradient>
+            <properties>
+                <startPosition name="Start position:" x="100" y="100"/>
+                <startColor alpha="170" blue="255" green="0" name="Start color:" red="0"/>
+                <endPosition name="End position:" x="0" y="0"/>
+                <endColor alpha="150" blue="0" green="0" name="End color:" red="0"/>
+            </properties>
+        </gradient>
+        <square>
+            <properties>
+                <size max="1024" min="4" name="Side size:" style="" value="512"/>
+                <shift max="100" min="0" name="Shift in percent:" style="" value="50"/>
+            </properties>
+        </square>
+    </filters>
+</set>
